@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="signup">
+        <img src="logo.png" alt="">
+        <h1 style="font-size: 35px;">Create your free account</h1>
+        <input type="text" id="name" placeholder="Enter your name">
+        <p style="font-size: 20px;margin-right: 380px;">Work Email</p>
+        <input type="text" id="email" placeholder="name@company.com">
+        <br>
+        <br>
+        <input type="password" id="pass" placeholder="Password">
+        <br>
+        <br>
+
+        <button onclick="onSignup()"
+            style="background-color: rgb(88, 88, 236);color: white; border: none;">Continue</button>
+        <br>
+        <br>
+        <button>Continue with Single Sign On</button>
+       
+        <br>
+        <button>Continue with google</button>
+        <br>
+        <p style="color: gray; font-size: 13px;">Continue with Apple ID</p>
+        <br>
+        <p style="color: gray;font-size: 13px;">By creating an account, you agree to the Terms of Service and Privacy
+            Policy.</p>
+        <p style="color: gray;">Already have an account?
+            <a href="index.html"><span style="color: blue;">Sign in</span></a>
+        </p>
+    </div>
+</body>
+</html>
+<script>
+        const onSignup = () => {
+        const payload = {
+            name:document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            pass:document.getElementById("pass").value
+        }
+        fetch("localhost:8060/users/register", {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        }).then(res => res.json())
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
+    }
+</script>
