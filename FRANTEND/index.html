@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index2.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
@@ -23,15 +23,43 @@
         <img src="logo.png" alt="">
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a style="background-color: white; color: black;" href="#">Product</a></li>
+        <li>
+          <button style="background-color: white; color: black; border: none; margin-top: 10px;"
+            onclick="w3_open()">Product</button>
+
+        </li>
         <li><a href="#">Solutions</a></li>
         <li><a href="#">Product Enterprises</a></li>
         <li> <a href="#"> Resources</a></li>
       </ul>
+      <!--  -->
+
+      <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none;width: 35%;font-size: 20px;margin-top: 70px; margin-right:100px;" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <a href="#" class="w3-bar-item w3-button">Overview</a>
+        <p style="font-size: 16px; color: rgb(188, 185, 185);margin-left: 14px;">Welcome to my table here to basics</p>
+        <a href="#" class="w3-bar-item w3-button">Features</a>
+        <p style="font-size: 16px; color: rgb(188, 185, 185);margin-left: 14px;">Discover to automation view reporting and more</p>
+        <a href="#" class="w3-bar-item w3-button">Integretions</a>
+        <p style="font-size: 16px; color: rgb(188, 185, 185);margin-left: 14px;">Bring your favourite tools in mytable</p>
+        <a href="#" class="w3-bar-item w3-button">Enterprise Overview</a>
+        <p style="font-size: 16px; color: rgb(188, 185, 185);margin-left: 14px;">See how mytable scale for large and complex organization</p>
+        <a href="#" class="w3-bar-item w3-button">Marketplace</a>
+        <a href="#" class="w3-bar-item w3-button">Downloads Apps </a>
+        <a href="#" class="w3-bar-item w3-button">What's new</a>
+        <a href="#" class="w3-bar-item w3-button">Pricing</a>
+      
+      
+      </div>
+
+
+
+      <!--  -->
       <div class="container-fluid-2">
         <button class="b1">Contacts Sales</button>
-        <button class="b2">Sign up for free</button>
-        <button class="b3">Sign in</button>
+        <a href="signup.html"><button class="b2">Sign up for free</button></a>
+        <button class="b3" onclick="document.getElementById('id01').style.display='block'"
+          class="w3-button w3-black">Sign in</button>
       </div>
     </div>
   </nav>
@@ -53,36 +81,8 @@
 
       </video>
     </div>
-
   </div>
 
-  <!-- <div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
-        <button class="w3-bar-item w3-button w3-large"
-        onclick="w3_close()">Close &times;</button>
-        <a href="#" class="w3-bar-item w3-button">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button">Link 3</a>
-      </div>
-      
-      <div id="main">
-      
-      <div class="w3-teal">
-        <button id="openNav" class="w3-button w3-teal w3-xlarge" onclick="w3_open()">Product</button>
-        <div class="w3-container">
-         
-        </div>
-      </div>
-      
-      <img src="img_car.jpg" alt="Car" style="width:100%">
-      
-      <div class="w3-container">
-      <p>In this example, the sidebar is hidden (style="display:none")</p>
-      <p>It is shown when you click on the menu icon in the top left corner.</p>
-      <p>When it is opened, it shifts the page content to the right.</p>
-      <p>We use JavaScript to add a 25% left margin to the div element with id="main" when this happens. The value "25%" matches the width of the sidebar.</p>
-      </div>
-      
-      </div> -->
   <div class="middle_section_2">
     <div>COLE HAAN</div>
     <div>Medium</div>
@@ -169,7 +169,8 @@
         industries</h1>
     </div>
     <div>
-      <p>Read all customer stories →</p></div>
+      <p>Read all customer stories →</p>
+    </div>
     <div>
       <img src="https://static.airtable.com/images/homescreen/homepage-bakerhughes-portrait.jpg" alt="">
     </div>
@@ -197,78 +198,125 @@
   </div>
   <div class="middle_section_10">
     <div>
-    <ul class="ul">
-      <li><img src="logo.png" alt=""></li>
-      <li class="li">Product</li>
-      <li class="li">Solutions</li>
-      <li class="li">Pricing</li>
-      <li class="li">Enterprises</li>
-      <li class="li">Contacts Sales</li>
-    </ul> 
+      <ul class="ul">
+        <li><img src="logo.png" alt=""></li>
+        <li class="li">Product</li>
+        <li class="li">Solutions</li>
+        <li class="li">Pricing</li>
+        <li class="li">Enterprises</li>
+        <li class="li">Contacts Sales</li>
+      </ul>
     </div>
-  <div>
-    <ul></ul>
-  </div>
+    <div>
+      <ul></ul>
+    </div>
   </div>
   <hr style="height:2px;width:160%;border-width:0;color:gray;background-color:rgb(171, 169, 169) ;margin-left: 50px;">
- <div class="footer">
-  <ul>
-    <li>Popular Templates</li>
-    <li>Content Calendar</li>
-    <li>Product Roadmap</li>
-    <li>Inventory Tracking</li>
-    <li>Marketing Campaign Tracking</li>
-    <li> Event Planning</li>
-    <li> Show more</li>
-  </ul>
-  <ul>
-    <li>Popular Extensions</li>
-    <li>Miro</li> 
-    <li>Jira</li>
-    <li>Clearbit</li> 
-    <li>Loom</li> 
-     <li>Formstack</li>
-     <li> Show more</li>
-    
-  </ul>
-  <ul>
-    <li> Popular Solutions</li>
-    <li>Marketing</li>
-    <li>Product Operations</li>
-    <li>Human Resources</li>
-    <li>Sales</li>
-    <li>Operations</li>
-    <li> Show more</li>
-  </ul>
+  <div class="footer">
+    <ul>
+      <li>Popular Templates</li>
+      <li>Content Calendar</li>
+      <li>Product Roadmap</li>
+      <li>Inventory Tracking</li>
+      <li>Marketing Campaign Tracking</li>
+      <li> Event Planning</li>
+      <li> Show more</li>
+    </ul>
+    <ul>
+      <li>Popular Extensions</li>
+      <li>Miro</li>
+      <li>Jira</li>
+      <li>Clearbit</li>
+      <li>Loom</li>
+      <li>Formstack</li>
+      <li> Show more</li>
 
-  <ul>
-    <li> Learn More</li>
-    <li>Webinars</li>
-    <li>POPULAR</li>
-    <li>Demos</li>
-    <li>NEW</li>
-    <li>Guides</li>
-    <li>Customer Stories</li>
-    <li>Articles</li>
-    <li> Show more</li>
-  </ul>
+    </ul>
+    <ul>
+      <li> Popular Solutions</li>
+      <li>Marketing</li>
+      <li>Product Operations</li>
+      <li>Human Resources</li>
+      <li>Sales</li>
+      <li>Operations</li>
+      <li> Show more</li>
+    </ul>
 
-  <ul>
-    <li> Company</li>
-    <li>About</li>
-    <li>Careers</li>
-    <li>POPULAR</li>
-    <li>Blog</li>
-    <li>Status</li>
-    <li>Newsroom</li>
-    <li> Show more</li>
-  </ul>
+    <ul>
+      <li> Learn More</li>
+      <li>Webinars</li>
+      <li>POPULAR</li>
+      <li>Demos</li>
+      <li>NEW</li>
+      <li>Guides</li>
+      <li>Customer Stories</li>
+      <li>Articles</li>
+      <li> Show more</li>
+    </ul>
 
-</div>
+    <ul>
+      <li> Company</li>
+      <li>About</li>
+      <li>Careers</li>
+      <li>POPULAR</li>
+      <li>Blog</li>
+      <li>Status</li>
+      <li>Newsroom</li>
+      <li> Show more</li>
+    </ul>
+
+  </div>
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-teal">
+        <span onclick="document.getElementById('id01').style.display='none'"
+          class="w3-button w3-display-topright">&times;</span>
+      </header>
+      <div class="w3-container">
+        <img src="logo.png" alt="">
+        <hr style="height:1px;width:100%;border-width:0;color:gray;background-color:rgb(171, 169, 169) ;">
+        <h1 style="font-size: 35px;">Sign in</h1>
+
+        <p style="font-size: 20px;margin-right: 380px;">Email</p>
+        <input type="text" id="email" placeholder="name@company.com">
+        <br>
+        <br>
+        <p style="font-size: 20px;margin-right: 380px;color: black;">Password</p>
+        <input type="password" id="pass" placeholder="Enter your password here">
+        <br>
+        <br>
+        <a href="viewpage.html"><button onclick="onLogin()" style="background-color: rgb(88, 88, 236);color: white; border: none;">Sign in</button></a>
+        <br>
+        <br>
+        <button>Continue with Single Sign On</button>
+        <br>
+        <br>
+        <button>Continue with google</button>
+        <br>
+        <p style="color: gray; font-size: 13px;">Continue with Apple </p>
+
+        <p style="color: blue;"> <a href="signup.html">
+            or create an account</a></p>
+        <br>
+        <br>
 
 
+
+      </div>
+
+    </div>
 </body>
 
-</html>
 
-<script src="landingpage.js"></script>
+<script src="index.js"></script>
+<script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+</script>
+
+</html>
