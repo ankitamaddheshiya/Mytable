@@ -1,1 +1,1 @@
-# Quickart
+# Mytable
